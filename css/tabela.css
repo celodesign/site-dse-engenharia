@@ -1,0 +1,13 @@
+.dados480, .dados640, .dados800, .dados960, .dados1200, .dados1600, .dados2400{
+    visibility: hidden;
+    height: 0;
+}
+
+.aparecer480, .aparecer640, .aparecer800, .aparecer960, .aparecer1200, .aparecer1600, .aparecer2400{
+    visibility: visible !important;
+    height: auto !important;
+}
+
+.dados480 td{
+    margin-bottom: 1px;
+}
