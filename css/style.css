@@ -22,7 +22,7 @@
     margin: 0 auto;
 }
 
-header{
+.home-header{
     padding-top: 35px;
     display: flex;
     align-items: center;
@@ -41,13 +41,13 @@ header{
     z-index: 31;
 }
 
-#menu-principal a{
+.hover-principal a, .hover-internas a{
     color: var(--branco);
     text-decoration: none;
     margin-right: 30px;
 }
 
-#menu-principal a:hover{
+.hover-principal a:hover{
     color: var(--laranja);
     transition: all 1s;
 }
@@ -148,7 +148,7 @@ section{
     padding-right: 50px;
 }
 
-#sobre button{
+#sobre a button{
     padding: 10px 40px;
     border-radius: 40px;
     border: none;
@@ -156,6 +156,7 @@ section{
     color: var(--branco);
     font-weight: bold;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 #tabela{
@@ -300,6 +301,256 @@ i{
     color: var(--branco);
 }
 
+
+/* Sobre a DSE */
+
+.internas-header{
+    padding-top: 35px;
+    background-color: var(--azul);
+}
+
+#menu-internas{
+    border: 1px solid #3d9be2;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    position: relative;
+    z-index: 111;
+}
+
+#titulo-pagina{
+    position: relative;
+    z-index: 11;
+    line-height: 1.7em;
+    padding: 40px 0;
+}
+
+#titulo-pagina h1, #titulo-pagina p{
+    color: var(--branco);
+}
+
+#container-internas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.ajuste-toggle-menu{
+    top: -83px;
+    right: 35px;
+}
+
+.introducao{
+    padding: 80px 0;
+    text-align: center;
+}
+
+.introducao h1{
+    font-size: 2em;
+    line-height: 1.2em;
+    padding-bottom: 30px;
+    color: var(--preto);
+}
+
+.introducao p{
+    line-height: 1.8em;
+}
+
+.bg-internas{
+    background-color: #F5F5F5;
+}
+
+.conteudo-internas{
+    display: flex;
+    padding: 100px 0;
+    align-items: center;
+}
+
+.conteudo-internas img{
+    max-width: 100%;
+}
+
+.textos-intenas{
+    width: 45%;
+    padding-left: 50px;
+}
+
+.hover-internas a:hover{
+    color: #9bccf1;
+    transition: all 1s;
+}
+
+.ajuste-sobre h1{
+    padding-top: 0 !important;
+}
+
+/* Benefícios */
+
+.box-beneficios{
+    position: relative;
+    width: 210px;
+    min-height: 227px;
+    background-color: var(--branco);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.box-beneficios img{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.container-beneficios{
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    align-items: center;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box-container{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-internas h1{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 2em;
+    color: var(--preto);
+}
+
+/* Depoimentos */
+
+.box-depoimentos{
+    position: relative;
+    width: 350px;
+    min-height: 150px;
+    background-color: var(--branco);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 50px 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.box-container p{
+    text-align: left;
+}
+
+.depoimentos-header{
+    display: flex;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.depoimentos-header img{
+    margin-right: 13px;
+}
+
+.depoimentos-header h2{
+    font-size: 1.2em;
+}
+
+/* Projetos */
+
+.box-projetos{
+    position: relative;
+    width: 210px;
+    min-height: 200px;
+    background-color: var(--branco);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 50px 30px;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box-projetos h2, .box-projetos p{
+    color: var(--branco);
+}
+
+.box-projetos h2{
+    font-size: 1em;
+}
+
+.projetos-ajuste{
+    top: 60%;
+    bottom: 60%;
+}
+
+/* Contato */
+.box-contato{
+    position: relative;
+    width: 445px;
+    height: 250px;
+    background-color: var(--branco);
+    border: 1px solid #A6A6A6;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container-box-contato{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.container-box-contato h2{
+    font-size: 1.1em;
+}
+
+.container-box-contato p:nth-child(1){
+    padding-bottom: 20px;
+}
+
+.ajuste-contato{
+    padding: 0;
+}
+
+.introducao-contato{
+    padding-top: 80px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.container-contato{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rede-social-contato{
+    display: flex;
+    align-items: center;
+}
+
+.container-redes-contato div:first-child{
+    margin-right: 15px;
+}
+
+.rede-social-contato img{
+    min-width: 0 !important;
+    margin-right: 10px;
+    margin-bottom: 0 !important;
+}
+
+.container-redes-contato{
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Responsivo */
 
 @media screen and (max-width: 1410px) {
@@ -361,6 +612,18 @@ i{
     #distribuicao div img:nth-child(1), #financiamento div img:nth-child(1), #equipamentos div:nth-child(2){
         padding-bottom: 0;
     }
+
+    .box-beneficios{
+        width: 320px;
+    }
+
+    .box-depoimentos{
+        width: 450px;
+    }
+
+    .box-projetos{
+        width: 310px;
+    }
 }
 
 @media screen and (max-width: 1280px){
@@ -385,6 +648,55 @@ i{
         min-width: 100%;
         text-align: center;
     }
+
+    .conteudo-internas{
+        flex-wrap: wrap;
+    }
+
+    .conteudo-internas img{
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .textos-intenas{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .textos-intenas h1{
+        padding-bottom: 15px;
+    }
+
+    .container-beneficios{
+        justify-content: center;
+    }
+
+    .box-beneficios, .box-projetos{
+        width: 450px;
+    }
+
+    .box-depoimentos{
+        width: 350px;
+    }
+
+    .box-contato{
+        width: 300px;
+    }
+
+    .container-box-contato{
+        font-size: 0.8em;
+    }
+
+    .container-redes-contato{
+        flex-direction: column;
+    }
+
+    .rede-social-contato{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
 }
 
 @media screen and (max-width: 1120px) {
@@ -394,6 +706,10 @@ i{
 
     #logos-equipamentos{
         flex-direction: column;
+    }
+
+    .box-beneficios, .box-projetos{
+        width: 330px;
     }
 
 }
@@ -430,6 +746,26 @@ i{
 
     #localizacao div:nth-child(2){
         justify-content: center;
+    }
+
+    .box-depoimentos, .box-projetos{
+        width: 280px;
+    }
+
+    .box-contato{
+        width: 600px;
+    }
+
+    .container-box-contato p:nth-child(1){
+        font-size: 1.2em;
+    }
+
+    .container-box-contato h2{
+        font-size: 1.5em;
+    }
+
+    .rede-social-contato p{
+        font-size: 1.2em;
     }
 }
 
@@ -470,6 +806,23 @@ i{
 
     #celo-design p{
         margin-bottom: 0 !important;
+    }
+
+    .container-beneficios{
+        justify-content: center;
+    }
+
+    .box-beneficios, .box-projetos{
+        width: 320px;
+    }
+
+    .box-projetos h2{
+        font-size: 1.2em;
+    }
+
+    .bg-internas h1{
+        padding: 0 20px;
+        padding-top: 60px;
     }
     
 }
