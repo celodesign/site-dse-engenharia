@@ -826,3 +826,44 @@ i{
     }
     
 }
+
+@media screen and (max-width: 325px){
+    .vantagens-item{
+        flex-direction: column;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .vantagens-item:nth-child(1){
+        margin-right: 0;
+    }
+
+    #textos-banner{
+        bottom: 50px;
+    }
+
+    #textos-banner h1{
+        font-size: 2.5em;
+    }
+
+    #distribuicao div, #financiamento div{
+        flex-direction: column;
+    }
+
+    #distribuicao div img:nth-child(1), #financiamento div img:nth-child(1){
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    #direitos-container{
+        text-align: center;
+    }
+
+    #localizacao p{
+        font-size: 0.9em;
+    }
+
+    #localizacao div:nth-child(2){
+        margin-left: 0;
+    }
+}
