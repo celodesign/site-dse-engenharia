@@ -183,12 +183,14 @@ table tbody tr td{
     padding: 10px 10px;
 }
 
-caption{
+caption, .accordion h1{
     font-size: 2em;
     font-weight: bold;
     color: var(--preto);
     padding-bottom: 30px;
 }
+
+/* Tabela Responsiva */
 
 #tabela-responsiva{
     display: none;
@@ -211,6 +213,12 @@ caption{
 
 #tabela-responsiva ul li table{
     width: 100%;
+}
+
+.content-tab-responsive{
+    display: inline-grid;
+    width: 89.7vw;
+    height: 100%;
 }
 
 footer{
