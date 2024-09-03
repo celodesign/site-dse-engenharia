@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="DSE Engenharia" />
+    <meta property="og:image" content="https://i.imgur.com/xFAVJKE.jpg" />
+    <meta property="og:descripton" content="Financie suas placas solares pagando mensalmente o mesmo valor de sua conta de luz atual" />
+
+    <title>DSE Engenharia</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tabela.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    
+</head>
+
+<body>
+    <header class="internas-header">
+            <div id="menu-internas">
+                <div id="container-internas" class="container">
+                    <div id="logo">
+                      <a href="{% url 'home' %}"><img src="{% static 'images/logo-dse.svg' %}" alt="logo-dse" width="200"></a>
+                    </div>
+                    <nav id="menu-principal" class="hover-internas">
+                      <a href="{% url 'sobre' %}">Sobre a DSE</a>
+                      <a href="{% url 'beneficios' %}">Benefícios</a>
+                      <a href="{% url 'depoimentos' %}">Depoimentos</a>
+                      <a href="{% url 'projetos' %}">Projetos</a>
+                      <a href="{% url 'contato' %}">Contato</a>
+                        <div id="redes">
+                          <a href="#"><img src="{% static 'images/icon-face.svg' %}" alt="icon-face"></a>
+                          <a href="#"><img src="{% static 'images/icon-insta.svg' %}" alt="icon-insta"></a>
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="toggle-menu ajuste-toggle-menu">
+                  <span></span>
+                </button>
+            </nav>
+            <div id="titulo-pagina" class="container">
+                <p>Você está em</p>
+                <h1>Benefícios</h1>
+            </div>
+
+            
+    </header>
+
+    <div id="menu" class="">
+                <nav class="main-nav">
+                  <ul>
+
+                    <li>
+                      <a href="{% url 'sobre' %}">
+                        Sobre a DSE
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="{% url 'beneficios' %}">
+                        Benefícios
+                      </a>
+                    </li>
+                    
+                    <li>
+                      <a href="{% url 'depoimentos' %}">
+                        Depoimentos
+                      </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'projetos' %}">
+                        Projetos
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="{% url 'contato' %}">
+                        Contato
+                        </a>
+                      </li>
+
+                  </ul>
+                </nav>
+                
+                <footer class="menu-footer">
+                  <nav class="footer-nav">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-facebook fa-fw"></i>
+                          Facebook
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa fa-instagram fa-fw"></i>
+                          Instagram
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </footer>
+              </div>
+              
+    <main>
+        <div class="bg-topo-internas"></div>
+        <section class="introducao container">
+            <h1>Maecenas id sapien a elit auctor luctus et ac leo. Vestibulum pellentesque tincidunt ipsum, non lacinia arcu interdum eu.</h1>
+            <p>Phasellus a dolor ultrices, pulvinar arcu eu, efficitur justo. Sed rutrum quam vel odio vestibulum, non posuere orci varius. Integer lobortis gravida lectus. Ut aliquet est diam, sit amet porttitor nibh scelerisque eu. Suspendisse cursus tempor urna, blandit consectetur lorem blandit nec. Nullam nec eleifend turpis. Donec ultrices mi a mattis mollis. Morbi egestas volutpat laoreet. Vivamus condimentum at nulla tempus mattis. Nam a quam non nulla eleifend mollis. Etiam tincidunt tellus nisi, eu porttitor lectus facilisis non.</p>
+        </section>
+        <section class="bg-internas">
+          <h1>Conheça as vantagens de ter Energia Solar em sua casa</h1>
+            <div class="container container-beneficios">
+
+                {% for b_item in BeneItens %}
+                  <div class="box-beneficios">
+                    <div class="box-container">
+                      <img src="{{ b_item.Beneficios_imagem }}" alt="icone-beneficio">
+                      <p>{{ b_item.Beneficios_descricao }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
+                
+                </div>
+            </div>
+        </section>
+    
+        <footer >
+          <div id="start-footer" class="container">
+            <div id="localizacao">
+                <div>
+                    <h1>Localização</h1>
+                    <p>Travessa Quintino Bocaiúva, 2301 - sala 1905 - Rogélio Fernandez Business Center - Belém/PA</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/icon-chat.svg' %}" alt="icon-chat">
+                    <p>contato@dsengenharia.com.br<br/>(91) 99197-3989</p>
+                </div>
+            </div>
+            <div id="distribuicao">
+                <h1>Distribuição</h1>
+                <div>
+                    <img src="{% static 'images/logo-sices.png' %}" alt="logo-sices">
+                    <img src="{% static 'images/logo-intelbras.png' %}" alt="logo-intelbras">
+                </div>
+            </div>
+            <div id="financiamento">
+                <h1>Financiamento</h1>
+                <div>
+                    <img src="{% static 'images/logo-santander.png' %}" alt="logo-santander">
+                    <img src="{% static 'images/logo-mutua.png' %}" alt="logo-mutua">
+                </div>
+            </div>
+            <div id="equipamentos">
+                <h1>Equipamentos</h1>
+                <div id="logos-equipamentos">
+                    <div>
+                        <img src="{% static 'images/logo-abb.png' %}" alt="logo-abb">
+                        <img src="{% static 'images/logo-fronius.png' %}" alt="logo-fronius">
+                        <img src="{% static 'images/logo-sungrow.png' %}" alt="logo-sungrow">
+                        <img src="{% static 'images/logo-clamper.png' %}" alt="logo-clamper">
+                    </div>
+                    <div>
+                        <img src="{% static 'images/logo-canadian.png' %}" alt="logo-canadian">
+                        <img src="{% static 'images/logo-jasolar.png' %}" alt="logo-jasolar">
+                        <img src="{% static 'images/logo-jinko.png' %}" alt="logo-jinko">
+                        <img src="{% static 'images/logo-tigo.png' %}" alt="logo-tigo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="direitos">
+                <div id="direitos-container" class="container">
+                    <p>DSE Engenharia 2024. Todos os direitos reservados</p>
+                    <div id="celo-design">
+                        <p>Feito por</p>
+                        <a href="https://celodesign.pythonanywhere.com/" target="_blank"><img src="{% static 'images/logo-celo-design.svg' %}" alt="logo-celo-design"></a>
+                    </div>
+                 </div>
+        </footer>
+
+</main>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/tabela.js"></script>
+    <script type="text/javascript">
+        $('.toggle-menu').click (function(){
+    $(this).toggleClass('active');
+    $('#menu').toggleClass('open');
+    });
+    </script>
+</body>
+
+</html>
